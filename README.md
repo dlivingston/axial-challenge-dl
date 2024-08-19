@@ -1,4 +1,6 @@
-# AxialChallengeDl
+# Axial-Challenge-DL
+
+This project is a "Take-home" challenge for Axial, and is only intended to meet the requirements specified. The application is built using Angular 18 and Angular Material. The application is responsive and can be viewed on mobile, tablet, and desktop devices.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
 
@@ -25,3 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Disclaimer
+
+This project is only intended to meet the requirements specified by Axial. No warranties, either express or implied, are hereby given. All information is supplied as is, without guarantee. The user assumes all responsibility for damages resulting from the use of this application, including (but not limited to) frustration, disgust, headaches, nausea, indigestion, system abends, disk head-crashes, general malfeasance, floods, fires, shark attack, nerve gas, locust infestation, cyclones, hurricanes, tsunamis, local electromagnetic disruptions, hydraulic brake system failure, invasion, low sperm count, hashing collisions, abnormal wear and tear of friction surfaces, cosmic radiation, inadvertent destruction of sensitive electronic components, amoebic dysentery, windstorms, the Riders of Nazgul, decreased resale value on your home, infuriated chickens, malfunctioning mechanical or electrical devices, premature activation of the distant early warning system, peasant uprisings, halitosis, artillery bombardment, explosions, cave-ins, and/or frogs falling from the sky. 

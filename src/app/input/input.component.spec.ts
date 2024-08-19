@@ -32,6 +32,36 @@ describe('InputComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should display required error when input is empty', () => {
+    const inputElement = fixture.nativeElement.querySelector('input');
+    inputElement.value = '';
+    inputElement.dispatchEvent(new Event('input'));
+    component.financialForm.controls['financialInput'].markAsTouched();
+    component.financialForm.controls['financialInput'].markAsDirty();
+    fixture.detectChanges();
+
+    const requiredErrorElement = fixture.nativeElement.querySelector('#required-error');
+    console.log('Required Error Element:', requiredErrorElement);
+    expect(requiredErrorElement).toBeTruthy();
+    expect(requiredErrorElement.textContent).toContain('Financial number is required.');
+  });
+
+  it('should display invalid format error for incorrect input', () => {
+    const inputElement = fixture.nativeElement.querySelector('input');
+    inputElement.value = 'invalid';
+    inputElement.dispatchEvent(new Event('input'));
+    component.financialForm.controls['financialInput'].setErrors({ invalidFinancialInput: true });
+    component.financialForm.controls['financialInput'].markAsTouched();
+    component.financialForm.controls['financialInput'].markAsDirty();
+    fixture.detectChanges();
+
+    console.log('Form Control Errors:', component.financialForm.controls['financialInput'].errors);
+    const formatErrorElement = fixture.nativeElement.querySelector('#format-error');
+    console.log('Format Error Element:', formatErrorElement);
+    expect(formatErrorElement).toBeTruthy();
+    expect(formatErrorElement.textContent).toContain('Invalid financial number format.');
+  });
+
   it('should enable the convert button when form is valid', () => {
     const inputElement = fixture.nativeElement.querySelector('input');
     inputElement.value = '250k';

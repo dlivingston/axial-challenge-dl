@@ -4,12 +4,12 @@
     <mat-label>Financial Number</mat-label>
     <input matInput formControlName="financialInput" placeholder="Enter number (e.g., 250k, 10m, .5b)">
     @if (financialForm.get('financialInput')?.hasError('invalidFinancialInput')) {
-      <mat-error>
+      <mat-error id="format-error">
         Invalid financial number format.
       </mat-error>
     }
     @if (financialForm.get('financialInput')?.hasError('required')) {
-      <mat-error>
+      <mat-error id="required-error">
         Financial number is required.
       </mat-error>
     }
