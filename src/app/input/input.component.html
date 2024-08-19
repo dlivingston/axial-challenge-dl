@@ -1,0 +1,18 @@
+<h2>Enter a financial number:</h2>
+<form [formGroup]="financialForm" class="input-wrapper">
+  <mat-form-field appearance="outline">
+    <mat-label>Financial Number</mat-label>
+    <input matInput formControlName="financialInput" placeholder="Enter number (e.g., 250k, 10m, .5b)">
+    @if (financialForm.get('financialInput')?.hasError('invalidFinancialInput')) {
+      <mat-error>
+        Invalid financial number format.
+      </mat-error>
+    }
+    @if (financialForm.get('financialInput')?.hasError('required')) {
+      <mat-error>
+        Financial number is required.
+      </mat-error>
+    }
+  </mat-form-field>
+  <button mat-flat-button (click)="convert()" [disabled]="financialForm.invalid">Convert</button>
+</form>

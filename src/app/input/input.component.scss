@@ -1,0 +1,10 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 1rem;
+  max-width: 450px;
+  button {
+    align-self: flex-start;
+  }
+}
